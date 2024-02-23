@@ -24,16 +24,20 @@ if __name__ == "__main__":
             print("Fin des Calculs :)")
             break #Rompt "while"
 
-        list_Operation = ["+"]
+        operatorFound= False
+
+        list_Operation = ["+","-"]
         #Vérification de présence d'
         for i in list_Operation:
             if(i in ope_Calcul):
+                operatorFound= True
                 try:
                     Operation(i, ope_Calcul)
                 except:
                     print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
                     SystemExit(-1)
-            else:
-                print("Erreur Syntaxique dans l'opération envoyée")
-                SystemExit(-1)
+                    
+        if(operatorFound is False):
+            print("Erreur Syntaxique dans l'opération envoyée")
+            SystemExit(-1)
     
