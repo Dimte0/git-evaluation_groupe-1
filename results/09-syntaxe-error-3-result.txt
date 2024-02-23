@@ -1,2 +1,1 @@
 Erreur de syntaxe pour le calcul: "2 3+5"
-Fin des Calculs :)
