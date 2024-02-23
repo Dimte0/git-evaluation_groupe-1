@@ -7,7 +7,11 @@ def Operation(Operateur, Calcul):
         print("Division par 0")
         raise SystemExit(1)  #On sort du programme avec le code erreur 1
     else:
-        print(eval(Calcul))
+        try:
+            print(eval(Calcul))
+        except:
+            print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
+            SystemExit(-1)
 
 def compter_operateurs(Calcul):
     # Compte le nombre total d'opérateurs dans l'expression
@@ -36,11 +40,9 @@ if __name__ == "__main__":
             for i in list_Operation:
                 if(i in ope_Calcul):
                     operatorFound = True
-                    try:
-                        Operation(i, ope_Calcul)
-                    except:
-                        print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
-                        SystemExit(-1)
+
+                    Operation(i, ope_Calcul)
+                    
 
             if(operatorFound is False):
                 print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
