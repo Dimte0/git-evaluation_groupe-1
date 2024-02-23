@@ -9,6 +9,7 @@ Sur Windows 2 chemins sont possibles:
 
 
 Se placer dans le bon répertoire pour effectuer les commandes .
+
 Lancement du programmme minitrice:
 
 ./minitrice.py
@@ -23,6 +24,7 @@ Ici, on vous présente des exemples d'exécutions des programmes disponibles.
 
 Avec le programme "minitrice.py", vous pouvez effectuer des opérations comme présenté ci-dessus.
 
+
 ````bash
 ./minitrice.py
 2+2
@@ -33,12 +35,14 @@ Avec le programme "minitrice.py", vous pouvez effectuer des opérations comme pr
 Fin des Calculs :)
 ````
 
+
 Vous pouvez également effectuer un pipe sur l'entrée standard du programme "minitrice.py".
 
 ````bash
 echo 5+5 | ./minitrice.py
 10
 ````
+
 
 Le programme "generator.py", génère des opérations aléatoires qui varient selon l'argument inscrit en paramètre (Voir la Section "Generator" pour la gestion des différentes erreurs).
 
@@ -53,6 +57,7 @@ Le programme "generator.py", génère des opérations aléatoires qui varient se
 
 Vous pouvez bien évidemment l'accouplez avec "minitrice.py".
 
+
 ````bash
 ./generator.py 5 | ./minitrice.py
 1139
@@ -61,6 +66,7 @@ Vous pouvez bien évidemment l'accouplez avec "minitrice.py".
 341
 993
 ````
+
 
 Si executé sans argument ( touche ENTER):
 
@@ -77,6 +83,7 @@ Si plusieurs opérateurs détectés :
 2.2+2+1
 3. Erreur de syntaxe  pour le calcul : "2+2+1"
 ````
+
 
 **Générator** : Description de la gestion des erreurs que nous avons mis en place sur le programme generator. La ou les procédures pour reproduire le ou les erreurs doivent être renseignées.
 
