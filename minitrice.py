@@ -22,7 +22,7 @@ if __name__ == "__main__":
             #Cas : Press "ENTER" dans l'invite
             if ope_Calcul == "":
                 print("Fin des Calculs :)")
-                raise SystemExit(0) 
+                break
             
             # Si le nombre d'opérteur excède 1 on affiche une erreur de syntaxe
             if compter_operateurs(ope_Calcul) > 1:
@@ -47,4 +47,7 @@ if __name__ == "__main__":
                 SystemExit(-1)
               
         except EOFError:
+            print("Fin des Calculs :)")
             break
+
+        
