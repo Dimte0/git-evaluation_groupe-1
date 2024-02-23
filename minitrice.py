@@ -11,7 +11,7 @@ def Operation(Operateur, Calcul):
 
 def compter_operateurs(Calcul):
     # Compte le nombre total d'opérateurs dans l'expression
-    return sum(Calcul.count(op) for op in ["+","-","/"])
+    return sum(Calcul.count(op) for op in ["+","-","/","*"])
 
 #Programme principale
 if __name__ == "__main__":
@@ -22,24 +22,34 @@ if __name__ == "__main__":
         #Input Request
         try:
             ope_Calcul = input()
-        #Cas : Fin de lecture d'un fichier
-        except:
-            break #Rompt "while"
-        
-        #Cas : Press "ENTER" dans l'invite
-        if(ope_Calcul == ""):
+            
+            #Cas : Press "ENTER" dans l'invite
+            if ope_Calcul == "":
+                print("Fin des Calculs :)")
+                break
+            
+            # Si le nombre d'opérteur excède 1 on affiche une erreur de syntaxe
+            if compter_operateurs(ope_Calcul) > 1:
+                print("Erreur de syntaxe pour le calcul: \"" + ope_Calcul + "\"")
+                raise SystemExit(1)
+
+            operatorFound= False
+
+            list_Operation = ["+","-","/","*"]
+            #Vérification de présence d'opérateur
+            for i in list_Operation:
+                if(i in ope_Calcul):
+                    operatorFound = True
+                    try:
+                        Operation(i, ope_Calcul)
+                    except:
+                        print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
+                        SystemExit(-1)
+
+            if(operatorFound is False):
+                print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
+                SystemExit(-1)
+              
+        except EOFError:
             print("Fin des Calculs :)")
-            break #Sort de la bpucle
-
-        list_Operation = ["+","*"]
-        #Vérification de présence d'opérateur
-        for i in list_Operation:
-            if(i in ope_Calcul):
-                try:
-                    
-                    Operation(i, ope_Calcul)
-                except:
-                    print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
-                    SystemExit(-1)
-
-    
+            break
