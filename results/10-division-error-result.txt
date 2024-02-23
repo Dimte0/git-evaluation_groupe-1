@@ -1,0 +1,2 @@
+Division par 0
+Fin des Calculs :)

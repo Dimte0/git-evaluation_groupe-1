@@ -1,0 +1,2 @@
+Erreur de syntaxe pour le calcul: "3+"
+Fin des Calculs :)
