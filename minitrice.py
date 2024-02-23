@@ -55,5 +55,4 @@ if __name__ == "__main__":
                 SystemExit(-1)
               
         except EOFError:
-            print("Fin des Calculs :)")
             break
