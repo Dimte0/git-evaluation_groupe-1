@@ -18,7 +18,7 @@ if __name__ == "__main__":
     while True:
         try:
             ope_Calcul = input()
-
+            
             #Cas : Press "ENTER" dans l'invite
             if ope_Calcul == "":
                 print("Fin des Calculs :)")
@@ -29,18 +29,22 @@ if __name__ == "__main__":
                 print("Erreur de syntaxe pour le calcul: \"" + ope_Calcul + "\"")
                 raise SystemExit(1)
 
-            #Vérification de présence d'opérateur
-            op_trouve = False
-            for i in ["+", "/"]:
-                if i in ope_Calcul: 
-                    Operation(i, ope_Calcul)
-                    op_trouve = True
-                    break
+            operatorFound= False
 
-            #Si il n'y a pas d'opérateur on affiche un message d'erreur
-            if not op_trouve:
+            list_Operation = ["+","-","/"]
+            #Vérification de présence d'opérateur
+            for i in list_Operation:
+                if(i in ope_Calcul):
+                    operatorFound = True
+                    try:
+                        Operation(i, ope_Calcul)
+                    except:
+                        print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
+                        SystemExit(-1)
+
+            if(operatorFound is False):
                 print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
-                raise SystemExit(1)
-            
+                SystemExit(-1)
+              
         except EOFError:
             break
