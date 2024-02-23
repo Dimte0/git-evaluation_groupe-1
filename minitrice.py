@@ -2,9 +2,16 @@
 
 def Operation(Operateur, Calcul):
     ope1, ope2 = Calcul.split(Operateur)
-    ope1, ope2 = int(ope1), int(ope2) #exception si le string ne peut être converti
-    
-    print(eval(Calcul))
+    ope1, ope2 = int(ope1), int(ope2)  # Exception si le string ne peut être converti
+    if Operateur == "/" and ope2 == 0:  # Cas division par 0
+        print("Division par 0")
+        raise SystemExit(1)  #On sort du programme avec le code erreur 1
+    else:
+        print(eval(Calcul))
+
+def compter_operateurs(Calcul):
+    # Compte le nombre total d'opérateurs dans l'expression
+    return sum(Calcul.count(op) for op in ["+","-","/"])
 
 #Programme principale
 if __name__ == "__main__":

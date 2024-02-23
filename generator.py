@@ -7,7 +7,9 @@ if __name__ == "__main__":
         try:
             #vérifie la convertion du string en int
             nb = int(sys.argv[1])
-            listOperator = ["+","*"]
+
+            listOperator = ["+","-","/","*"]
+            
             sizeListOpe = len(listOperator)
             # Boucle la création
             for i in range (0,nb):
