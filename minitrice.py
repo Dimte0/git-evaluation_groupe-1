@@ -4,7 +4,7 @@ def Operation(Operateur, Calcul):
     ope1, ope2 = Calcul.split(Operateur)
     ope1, ope2 = int(ope1), int(ope2)  # Exception si le string ne peut être converti
 
-    print(eval(Calcul))
+    print(round(eval(Calcul),2))
     
             
 
