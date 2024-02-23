@@ -8,7 +8,6 @@ Se placer dans le bon répertoire pour effectuer les commandes
 Lancement du programmme minitrice:
 ./minitrice.py
 
-
 Après avoir lancer le programme vous pouvez faire differente intéraction:
 2+2 ( Effectuer des opérations)
 Appuyer sur la touche Entrer (pour valider la saisie, si la ligne est vide sorti du programme)
