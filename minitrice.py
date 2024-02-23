@@ -3,11 +3,10 @@
 def Operation(Operateur, Calcul):
     ope1, ope2 = Calcul.split(Operateur)
     ope1, ope2 = int(ope1), int(ope2)  # Exception si le string ne peut être converti
-    if Operateur == "/" and ope2 == 0:  # Cas division par 0
-        print("Division par 0")
-        raise SystemExit(1)  #On sort du programme avec le code erreur 1
-    else:
-        print(eval(Calcul))
+
+    print(eval(Calcul))
+    
+            
 
 def compter_operateurs(Calcul):
     # Compte le nombre total d'opérateurs dans l'expression
@@ -42,9 +41,14 @@ if __name__ == "__main__":
                     operatorFound = True
                     try:
                         Operation(i, ope_Calcul)
-                    except:
+                    except ZeroDivisionError:
+                        print("Division par 0")
+                        SystemExit(1)
+                    except :
                         print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
                         SystemExit(-1)
+                        
+                    
 
             if(operatorFound is False):
                 print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
