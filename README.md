@@ -1,11 +1,11 @@
 
 **Installation**
 
-Afin de pouvoir vous lancez dans l'exécution des différents programmes, il vous sera demander d'installer une version de Python3.
-Sur linux python est normalement déjà pré-installer.
+Afin de pouvoir vous lancer dans l'exécution des différents programmes, il vous sera demandé d'installer une version de Python3.
+Sur linux python est normalement déjà pré-installé.
 Sur Windows 2 chemins sont possibles:
-- Taper python sur le microsoft Store est installer
-- Télécharger python sur internet est lancé exécutable
+- Rechercher python sur le microsoft Store et installer
+- Télécharger python sur internet et lancer l'exécutable
 
 
 Se placer dans le bon répertoire pour effectuer les commandes .
@@ -14,13 +14,13 @@ Lancement du programmme minitrice:
 
 ./minitrice.py
 
-Après avoir lancé le programme vous pouvez faire differente intéraction:
+Après avoir lancé le programme différentes intéractions sont possibles:
 - Inscrire des opérations à la suite de l'éxécution (Un résultat sera par la suite envoyé) : ( 2+2 ; 5*7)
-Appuyer sur la touche ENTER pour valider la saisie (si la ligne est vide sorti du programme).
+Appuyer sur la touche ENTER pour valider la saisie (si la ligne est vide, cela entraîne l'arrêt du programme).
 
-**Exécution**: Un exemple d'utilisation de votre programme, avec la sortie attendu, comme ce qui est fait dans ce document,
+**Exécution**: 
 
-Ici, on vous présente des exemples d'exécutions des programmes disponibles.
+Ici, on vous présente des exemples d'exécution des programmes disponibles.
 
 Avec le programme "minitrice.py", vous pouvez effectuer des opérations comme présenté ci-dessus.
 
@@ -55,7 +55,7 @@ Le programme "generator.py", génère des opérations aléatoires qui varient se
 993
 ````
 
-Vous pouvez bien évidemment l'accouplez avec "minitrice.py".
+Vous pouvez bien évidemment le coupler avec "minitrice.py".
 
 
 ````bash
@@ -85,7 +85,7 @@ Si plusieurs opérateurs détectés :
 ````
 
 
-**Générator** : Description de la gestion des erreurs que nous avons mis en place sur le programme generator. La ou les procédures pour reproduire le ou les erreurs doivent être renseignées.
+**Générator** : 
 
 ***Gestion des erreurs***
 
@@ -110,5 +110,5 @@ Le lien de la vidéo GOURCE : https://youtu.be/6sBaMwAqrnU
 
 **Liens utiles** : 
 
-insérer liens utiles 
+-aucune ressource externe n'a été utilisée
 
