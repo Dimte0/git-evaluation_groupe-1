@@ -1,0 +1,2 @@
+Erreur de syntaxe pour le calcul: "*0"
+Fin des Calculs :)
