@@ -11,7 +11,7 @@ def Operation(Operateur, Calcul):
 
 def compter_operateurs(Calcul):
     # Compte le nombre total d'opérateurs dans l'expression
-    return sum(Calcul.count(op) for op in ["+", "/"])
+    return sum(Calcul.count(op) for op in ["+","-","/"])
 
 #Programme principale
 if __name__ == "__main__":
