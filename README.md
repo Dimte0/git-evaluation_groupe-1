@@ -99,7 +99,7 @@ Si aucun argument ou plusieurs arguments en entrée:
 
 **Publication** : 
 
-insérer lien vidéo gource ici
+Le lien de la vidéo GOURCE : https://youtu.be/6sBaMwAqrnU
 
 **Liens utiles** : 
 
