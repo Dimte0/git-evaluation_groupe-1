@@ -29,6 +29,7 @@ if __name__ == "__main__":
         for i in list_Operation:
             if(i in ope_Calcul):
                 try:
+                    
                     Operation(i, ope_Calcul)
                 except:
                     print("Erreur de syntaxe pour le calcul: \""+ ope_Calcul +"\"")
